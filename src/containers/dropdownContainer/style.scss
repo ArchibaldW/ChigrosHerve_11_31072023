@@ -1,0 +1,7 @@
+.dropdown-container {
+  width: 90%;
+  margin: 40px auto 0;
+  > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

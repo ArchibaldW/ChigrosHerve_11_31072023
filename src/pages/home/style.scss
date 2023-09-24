@@ -1,0 +1,28 @@
+@import '/src/assets/scss/variables.scss';
+
+.home {
+  &__products {
+    background: #f7f7f7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+    margin: 45px 0;
+    padding: 50px;
+    border-radius: 25px;
+
+    @media (max-width: $breakpointTablet) {
+      background: transparent;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 35px;
+      padding: 0;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+      margin: 20px 0
+    }
+  }
+}

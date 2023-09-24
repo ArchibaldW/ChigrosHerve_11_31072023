@@ -1,0 +1,34 @@
+@import '/src/assets/scss/variables.scss';
+
+.about__banner {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  height: 223px;
+
+  @media (max-width: $breakpointTablet) {
+    height: 167px;
+  }
+
+  @media (max-width: $breakpointMobile) {
+    height: 111px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000, 0.3);
+  }
+
+  &__img {
+    border-radius: inherit;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

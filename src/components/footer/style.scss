@@ -1,0 +1,33 @@
+@import '/src/assets/scss/variables.scss';
+
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 60px 0 30px;
+  font-size: 24px;
+  font-weight: 500;
+
+  @media (max-width: $breakpointTablet) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $breakpointMobile) {
+    padding: 60px 0;
+    font-size: 12px;
+  }
+
+  &__img {
+    max-height: 40px;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpointTablet) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      margin-bottom: 10px;
+    }
+  }
+}

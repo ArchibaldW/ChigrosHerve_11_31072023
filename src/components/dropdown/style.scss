@@ -1,0 +1,57 @@
+@import '/src/assets/scss/variables.scss';
+
+.dropdown {
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  &__title {
+    position: relative;
+    background-color: #ff6060;
+    color: #ffffff;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 500;
+
+    @media (max-width: $breakpointTablet) {
+      padding: 10px;
+      font-size: 19px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__chevron {
+    transform: rotate(0deg);
+    transition: transform 0.3s linear;
+
+    @media (max-width: $breakpointMobile) {
+      max-height: 12px;
+    }
+
+    &.dropdown__open {
+      transform: rotate(-180deg);
+      transition: transform 0.3s linear;
+    }
+  }
+
+  &__content {
+    padding: 25px 20px 20px;
+    font-size: 18px;
+    color: #ff6060;
+
+    @media (max-width: $breakpointTablet) {
+      padding: 20px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+}

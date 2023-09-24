@@ -1,0 +1,25 @@
+@import '/src/assets/scss/variables.scss';
+
+.single__product {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+  }
+  &__host {
+    display: flex;
+    align-items: center;
+    max-width: 20%;
+    word-spacing: 100vw;
+    &__name {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    &__picture {
+      height: 64px;
+      border-radius: 999px;
+    }
+  }
+}

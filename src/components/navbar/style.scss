@@ -1,0 +1,58 @@
+@import '/src/assets/scss/variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 63px;
+
+  @media (max-width: $breakpointTablet) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: $breakpointMobile) {
+    padding: 20px 0 16px;
+  }
+
+  &__img {
+    max-height: 68px;
+
+    @media (max-width: $breakpointTablet) {
+      max-height: 58px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      max-height: 40px;
+    }
+  }
+
+  &__link {
+    color: #ff6060;
+    font-size: 24px;
+
+    @media (max-width: $breakpointTablet) {
+      font-size: 19px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      font-size: 14px;
+    }
+
+    &:not(.active) {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-left: 57px;
+
+      @media (max-width: $breakpointTablet) {
+        margin-left: 30px;
+      }
+
+      @media (max-width: $breakpointMobile) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
