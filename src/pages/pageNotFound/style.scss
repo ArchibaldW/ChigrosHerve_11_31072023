@@ -1,7 +1,7 @@
 @import '/src/assets/scss/variables.scss';
 
 .error__page {
-  color: #ff6060;
+  color: $mainColor;
   text-align: center;
   margin-bottom: 140px;
 
@@ -55,7 +55,7 @@
 
   &__home__link {
     display: block;
-    color: #ff6060;
+    color: $mainColor;
     font-size: 18px;
     font-weight: 500;
 

@@ -1,0 +1,11 @@
+@import '/src/assets/scss/variables.scss';
+
+.tag {
+  background-color: $mainColor;
+  color: white;
+  border-radius: 99999px;
+  min-width: 85px;
+  padding: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+}

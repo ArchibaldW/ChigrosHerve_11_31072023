@@ -1,0 +1,6 @@
+.rating {
+  display: flex;
+  > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}

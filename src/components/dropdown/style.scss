@@ -1,11 +1,11 @@
 @import '/src/assets/scss/variables.scss';
 
 .dropdown {
-  background-color: #f6f6f6;
+  background-color: $backgroundColor;
   border-radius: 10px;
   &__title {
     position: relative;
-    background-color: #ff6060;
+    background-color: $mainColor;
     color: #ffffff;
     padding: 15px 10px;
     display: flex;
@@ -42,7 +42,7 @@
   &__content {
     padding: 25px 20px 20px;
     font-size: 18px;
-    color: #ff6060;
+    color: $mainColor;
 
     @media (max-width: $breakpointTablet) {
       padding: 20px;

@@ -27,7 +27,7 @@
   }
 
   &__link {
-    color: #ff6060;
+    color: $mainColor;
     font-size: 24px;
 
     @media (max-width: $breakpointTablet) {
