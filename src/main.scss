@@ -18,19 +18,34 @@ body {
     width: 100%;
   }
 
-  .App > *:not(.footer) {
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
+  .App {
+    position: relative;
+    height: 100%;
 
-    @media (max-width: 1500px) {
-      margin-right: 30px;
-      margin-left: 30px;
+    > * {
+      &:not(.footer) {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media (max-width: 1500px) {
+          margin-right: 30px;
+          margin-left: 30px;
+        }
+
+        @media (max-width: $breakpointMobile) {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+        &:not(.navbar) {
+          padding-bottom: 204px;
+        }
+      }
     }
-
-    @media (max-width: $breakpointMobile) {
-      margin-right: 20px;
-      margin-left: 20px;
+    .footer {
+      position: absolute;
+      bottom: 0;
+      max-height: 204px;
     }
   }
 }
