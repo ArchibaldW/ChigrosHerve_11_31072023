@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 
 import './style.scss'
 
-export default function DropdownContainer({ items }) {
+export default function DropdownsContainer({ items }) {
   const itemRefs = useRef([])
 
   const onDropdownClick = (currentPosition) => {
@@ -18,11 +18,14 @@ export default function DropdownContainer({ items }) {
     <div className='dropdown-container'>
       {items.map((item, i) => (
         <Dropdown
+          key={i}
           ref={(el) => (itemRefs.current[i] = el)}
-          item={item}
+          title={item.title}
           currentPosition={i}
           onDropdownClick={onDropdownClick}
-        />
+        >
+          {item.content}
+        </Dropdown>
       ))}
     </div>
   )

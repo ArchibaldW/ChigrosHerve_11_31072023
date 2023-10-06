@@ -1,5 +1,5 @@
 import AboutBanner from '../../components/aboutBanner'
-import DropdownContainer from '../../containers/dropdownContainer'
+import DropdownContainer from '../../containers/dropdownsContainer'
 
 import './style.scss'
 

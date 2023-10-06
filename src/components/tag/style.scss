@@ -4,8 +4,18 @@
   background-color: $mainColor;
   color: white;
   border-radius: 99999px;
-  min-width: 85px;
+  min-width: 115px;
   padding: 5px 15px;
   font-size: 14px;
   text-align: center;
+
+  @media (max-width: $breakpointTablet) {
+    min-width: 99px;
+    font-size: 12px;
+  }
+
+  @media (max-width: $breakpointMobile) {
+    min-width: 84px;
+    font-size: 10px;
+  }
 }

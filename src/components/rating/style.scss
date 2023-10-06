@@ -1,6 +1,23 @@
+@import '/src/assets/scss/variables.scss';
+
 .rating {
   display: flex;
   > *:not(:first-child) {
-    margin-left: 10px;
+    margin-left: 12px;
+    @media (max-width: $breakpointTablet) {
+      margin-left: 9px;
+    }
+    @media (max-width: $breakpointMobile) {
+      margin-left: 6px;
+    }
+  }
+
+  &__star {
+    @media (max-width: $breakpointTablet) {
+      height: 18px;
+    }
+    @media (max-width: $breakpointMobile) {
+      height: 13px;
+    }
   }
 }

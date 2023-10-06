@@ -4,7 +4,10 @@ import './style.scss'
 import Arrow from './arrow.svg'
 
 const Dropdown = forwardRef(
-  ({ currentPosition, onDropdownClick, item }, ref) => {
+  (
+    { title, children, currentPosition = 1, onDropdownClick = () => {} },
+    ref
+  ) => {
     const [isOpen, setIsOpen] = useState(false)
 
     useImperativeHandle(ref, () => ({
@@ -24,14 +27,14 @@ const Dropdown = forwardRef(
     return (
       <div className='dropdown'>
         <div className='dropdown__title' onClick={handleClick}>
-          {item.title}{' '}
+          {title}{' '}
           <img
             className={`dropdown__chevron ${isOpen ? 'dropdown__open' : ''}`}
             src={Arrow}
             alt=''
           />
         </div>
-        {isOpen && <div className='dropdown__content'>{item.content}</div>}
+        {isOpen && <div className='dropdown__content'>{children}</div>}
       </div>
     )
   }

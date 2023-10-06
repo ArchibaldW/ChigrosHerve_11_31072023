@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 25px;
   @media (max-width: $breakpointTablet) {
     max-height: 295px;
   }
@@ -16,7 +17,9 @@
   }
 
   &__picture {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 
   &__next {

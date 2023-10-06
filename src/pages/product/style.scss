@@ -3,46 +3,100 @@
 .single__product {
   color: $mainColor;
   margin-bottom: 50px;
-  &__header {
-    margin-top: 24px;
+  &__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    margin: 24px 0;
+
+    @media (max-width: $breakpointTablet) {
+      margin: 20px 0;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      flex-direction: column;
+      margin: 15px 0;
+    }
+    &__left {
+      flex-grow: 1;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      max-width: 25%;
+
+      @media (max-width: $breakpointMobile) {
+        margin-top: 16px;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 100%;
+      }
+    }
   }
+
   &__main {
     flex-grow: 1;
   }
   &__title {
     font-size: 36px;
     font-weight: 500;
+
+    @media (max-width: $breakpointTablet) {
+      font-size: 27px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      font-size: 18px;
+    }
   }
   &__location {
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 20px;
+
+    @media (max-width: $breakpointTablet) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $breakpointMobile) {
+      font-size: 14px;
+    }
   }
+
   &__host {
     display: flex;
     align-items: center;
-    max-width: 20%;
     word-spacing: 100vw;
+    margin-bottom: 20px;
+    @media (max-width: $breakpointMobile) {
+      margin-bottom: 0px;
+    }
     &__name {
       text-align: right;
       margin-right: 10px;
       font-size: 18px;
       font-weight: 500;
+
+      @media (max-width: $breakpointTablet) {
+        font-size: 15px;
+      }
+
+      @media (max-width: $breakpointMobile) {
+        font-size: 12px;
+      }
     }
 
     &__picture {
       height: 64px;
       border-radius: 999px;
-    }
-  }
 
-  &__details {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+      @media (max-width: $breakpointTablet) {
+        height: 47px;
+      }
+
+      @media (max-width: $breakpointMobile) {
+        height: 32px;
+      }
+    }
   }
 
   &__dropdowns {
@@ -69,8 +123,14 @@
 
       &:last-child {
         .dropdown__content {
-          word-spacing: 100vw;
-          line-height: 1.5rem;
+          ul {
+            padding: 0;
+            margin: 0;
+            li {
+              display: block;
+              text-align: left;
+            }
+          }
         }
       }
     }
